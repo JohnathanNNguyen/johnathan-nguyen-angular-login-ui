@@ -1,0 +1,26 @@
+
+<div class="container">
+  <form class="form-container" [formGroup]="login">
+    <label>Email</label>
+    <input  type="text" formControlName="email">
+  
+    <label>First Name</label>
+    <input type="text" formControlName="firstName">
+  
+    <label>Last Name</label>
+    <input type="text" formControlName="lastName">
+  
+    <label>Birth Year</label>
+    <input placeholder="YYYY" type="text" formControlName="birthday">
+
+    <button
+    class="btn btn-outline-info"
+    type="submit"
+    [disabled]="!login.valid"
+    (click)="onSubmitButton()"
+    >Submit</button>
+  
+  </form>
+
+</div>
+<router-outlet></router-outlet>
